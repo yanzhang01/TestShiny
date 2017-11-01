@@ -1,4 +1,4 @@
-This Shiny App is made by Yan Zhang. Still in develop-and-test mode. *Not Online Yet*
+This Shiny App is made by Yan Zhang. Still in develop-and-test mode. *Not Online Yet.*
 
 
 # Run the Shiny App of PgenePapers (beta version)
