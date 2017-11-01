@@ -1,4 +1,7 @@
 library(shiny)
+require(RCurl)
+
+nuts <-read.csv(text=getURL("https://raw.githubusercontent.com/opetchey/RREEBES/master/Beninca_etal_2008_Nature/data/nutrients_original.csv"), skip=7, header=T)
 
 # Define UI for the App
 ui <- pageWithSidebar(
