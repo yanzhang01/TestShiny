@@ -1,0 +1,150 @@
+1. PLoS One. 2017 Oct 24;12(10):e0186788. doi: 10.1371/journal.pone.0186788.
+eCollection 2017.
+
+Chloroplast genomes of Lilium lancifolium, L. amabile, L. callosum, and L.
+philadelphicum: Molecular characterization and their use in phylogenetic analysis
+in the genus Lilium and other allied genera in the order Liliales.
+
+Kim JH(1), Lee SI(2)(3), Kim BR(1), Choi IY(4), Ryser P(5), Kim NS(2)(6).
+
+Author information: 
+(1)Department of Horticulture, Kangwon National University, Chuncheon, Korea.
+(2)Institute of Bioscience and Biomedical Sciences, Kangwon National University, 
+Chuncheon, Korea.
+(3)Advanced Radiation Technology Institute, Korea Atomic Energy Research
+Institute, Sinjeong, Jeongeup, Jeonbuk, Korea.
+(4)Department of Agricultural Life Science, Kangwon National University,
+Chuncheon, Korea.
+(5)Department of Biology, Laurentian University, Sudbury, Ontario, Canada.
+(6)Department of Molecular Bioscience, Kangwon National University, Chuncheon,
+Korea.
+
+Chloroplast (cp) genomes of Lilium amabile, L. callosum, L. lancifolium, and L.
+philadelphicum were fully sequenced. Using these four novel cp genome sequences
+and five other previously sequenced cp genomes, features of the cp genomes were
+characterized in detail among species in the genus Lilium and other related
+genera in the order Liliales. The lengths and nucleotide composition showed
+little variation. No structural variation was found among the cp genomes in
+Liliales. Gene contents were conserved among four newly sequenced cp genome in
+Lilium species, the only differences being in two pseudogenes. We identified 112 
+genes in 13 functional categories, 18 of which carried introns that were
+conserved among the species in Liliales. There were 16-21 SSR loci (>12 bp, >3
+repeats) in the cp genomes in Lilium and the genomic locations of these loci were
+highly variable among the species. Average mutations were 15 SNPs per 1kb and 5
+indels per 1kb, respectively, in the cp genomes of the newly sequenced four
+Lilium species. Phylogenetic classifications revealed some discrepancies between 
+trees based on the cp genomes and previous classifications based on the
+morphology and geographic distributions.
+
+DOI: 10.1371/journal.pone.0186788 
+PMID: 29065181 
+
+
+2. Nucleic Acids Res. 2017 Oct 20. doi: 10.1093/nar/gkx972. [Epub ahead of print]
+
+dreamBase: DNA modification, RNA regulation and protein binding of expressed
+pseudogenes in human health and disease.
+
+Zheng LL(1), Zhou KR(1), Liu S(1), Zhang DY(1), Wang ZL(1), Chen ZR(1), Yang
+JH(1), Qu LH(1).
+
+Author information: 
+(1)Key Laboratory of Gene Engineering of the Ministry of Education, State Key
+Laboratory for Biocontrol, Sun Yat-sen University, Guangzhou 510275, PR China.
+
+Although thousands of pseudogenes have been annotated in the human genome, their 
+transcriptional regulation, expression profiles and functional mechanisms are
+largely unknown. In this study, we developed dreamBase
+(http://rna.sysu.edu.cn/dreamBase) to facilitate the investigation of DNA
+modification, RNA regulation and protein binding of potential expressed
+pseudogenes from multidimensional high-throughput sequencing data. Based on ∼5500
+ChIP-seq and DNase-seq datasets, we identified genome-wide binding profiles of
+various transcription-associated factors around pseudogene loci. By integrating
+∼18 000 RNA-seq data, we analysed the expression profiles of pseudogenes and
+explored their co-expression patterns with their parent genes in 32 cancers and
+31 normal tissues. By combining microRNA binding sites, we demonstrated complex
+post-transcriptional regulation networks involving 275 microRNAs and 1201
+pseudogenes. We generated ceRNA networks to illustrate the crosstalk between
+pseudogenes and their parent genes through competitive binding of microRNAs. In
+addition, we studied transcriptome-wide interactions between RNA binding proteins
+(RBPs) and pseudogenes based on 458 CLIP-seq datasets. In conjunction with
+epitranscriptome sequencing data, we also mapped 1039 RNA modification sites onto
+635 pseudogenes. This database will provide insights into the transcriptional
+regulation, expression, functions and mechanisms of pseudogenes as well as their 
+roles in biological processes and diseases.
+
+© The Author(s) 2017. Published by Oxford University Press on behalf of Nucleic
+Acids Research.
+
+DOI: 10.1093/nar/gkx972 
+PMID: 29059382 
+
+
+3. BMC Genomics. 2017 Oct 18;18(1):804. doi: 10.1186/s12864-017-4178-4.
+
+A Support Vector Machine based method to distinguish long non-coding RNAs from
+protein coding transcripts.
+
+Schneider HW(1), Raiol T(2), Brigido MM(3), Walter MEMT(4), Stadler PF(5).
+
+Author information: 
+(1)Department of Computer Science, University of Brasilia, ICC Central, Instituto
+de Ciências Exatas, Campus Universitario Darcy Ribeiro, Asa Norte, CEP:
+70910-900, Brasilia, Brazil. hugowschneider@gmail.com.
+(2)Gerência Regional de Brasilia (GEREB), Oswaldo Cruz Foundation (Fiocruz), Av. 
+L3 Norte, Campus Universitário Darcy Ribeiro, Gleba A, Asa Norte, CEP: 70910-900,
+Brasília, Brazil.
+(3)Laboratory of Molecular Biology, University of Brasilia, Instituto de Ciencias
+Biologicas, Campus Universitario Darcy Ribeiro, Asa Norte, CEP: 70910-900,
+Brasilia, Brazil.
+(4)Department of Computer Science, University of Brasilia, ICC Central, Instituto
+de Ciências Exatas, Campus Universitario Darcy Ribeiro, Asa Norte, CEP:
+70910-900, Brasilia, Brazil.
+(5)Bioinformatics Group, Department of Computer Science and Interdisciplinary
+Center for Bioinformatics, University of Leipzig, Hartelstrasse 16-18, Leipzig,
+D-04107, Germany.
+
+BACKGROUND: In recent years, a rapidly increasing number of RNA transcripts has
+been generated by thousands of sequencing projects around the world, creating
+enormous volumes of transcript data to be analyzed. An important problem to be
+addressed when analyzing this data is distinguishing between long non-coding RNAs
+(lncRNAs) and protein coding transcripts (PCTs). Thus, we present a Support
+Vector Machine (SVM) based method to distinguish lncRNAs from PCTs, using
+features based on frequencies of nucleotide patterns and ORF lengths, in
+transcripts.
+METHODS: The proposed method is based on SVM and uses the first ORF relative
+length and frequencies of nucleotide patterns selected by PCA as features. FASTA 
+files were used as input to calculate all possible features. These features were 
+divided in two sets: (i) 336 frequencies of nucleotide patterns; and (ii) 4
+features derived from ORFs. PCA were applied to the first set to identify 6
+groups of frequencies that could most contribute to the distinction. Twenty-four 
+experiments using the 6 groups from the first set and the features from the
+second set where built to create the best model to distinguish lncRNAs from PCTs.
+RESULTS: This method was trained and tested with human (Homo sapiens), mouse (Mus
+musculus) and zebrafish (Danio rerio) data, achieving 98.21%, 98.03% and 96.09%, 
+accuracy, respectively. Our method was compared to other tools available in the
+literature (CPAT, CPC, iSeeRNA, lncRNApred, lncRScan-SVM and FEELnc), and showed 
+an improvement in accuracy by ≈3.00%. In addition, to validate our model, the
+mouse data was classified with the human model, and vice-versa, achieving ≈97.80%
+accuracy in both cases, showing that the model is not overfit. The SVM models
+were validated with data from rat (Rattus norvegicus), pig (Sus scrofa) and fruit
+fly (Drosophila melanogaster), and obtained more than 84.00% accuracy in all
+these organisms. Our results also showed that 81.2% of human pseudogenes and
+91.7% of mouse pseudogenes were classified as non-coding. Moreover, our method
+was capable of re-annotating two uncharacterized sequences of Swiss-Prot database
+with high probability of being lncRNAs. Finally, in order to use the method to
+annotate transcripts derived from RNA-seq, previously identified lncRNAs of
+human, gorilla (Gorilla gorilla) and rhesus macaque (Macaca mulatta) were
+analyzed, having successfully classified 98.62%, 80.8% and 91.9%, respectively.
+CONCLUSIONS: The SVM method proposed in this work presents high performance to
+distinguish lncRNAs from PCTs, as shown in the results. To build the model,
+besides using features known in the literature regarding ORFs, we used PCA to
+identify features among nucleotide pattern frequencies that contribute the most
+in distinguishing lncRNAs from PCTs, in reference data sets. Interestingly,
+models created with two evolutionary distant species could distinguish lncRNAs of
+even more distant species.
+
+DOI: 10.1186/s12864-017-4178-4 
+PMID: 29047334 
+
+
