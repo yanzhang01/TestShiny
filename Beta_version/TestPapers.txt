@@ -1,0 +1,14 @@
+PRDM1 : RPLP0P2
+LUAD-associated pseudogenes. We further revealed that the 3 ceRNA triples
+(miR-21-5p-NKAPP1-PRDM11, miR-29c-3p-MSTO2P-EZH2 and miR-29c-3p-RPLP0P2-EZH2),
+whose high risk groups were associated with the poor prognosis of LUAD, may be
+
+PRDM1 : NKAPP1
+LUAD-associated pseudogenes. We further revealed that the 3 ceRNA triples
+(miR-21-5p-NKAPP1-PRDM11, miR-29c-3p-MSTO2P-EZH2 and miR-29c-3p-RPLP0P2-EZH2),
+whose high risk groups were associated with the poor prognosis of LUAD, may be
+
+EZH2 : MSTO2P
+LUAD-associated pseudogenes. We further revealed that the 3 ceRNA triples
+(miR-21-5p-NKAPP1-PRDM11, miR-29c-3p-MSTO2P-EZH2 and miR-29c-3p-RPLP0P2-EZH2),
+considered as potential prognostic signatures. Moreover, by integrating target
