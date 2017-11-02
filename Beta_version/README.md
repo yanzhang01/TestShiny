@@ -10,3 +10,5 @@ Run the app in R:
 if (!require('shiny')) install.packages("shiny")
 shiny::runGitHub("shiny_PgenePapers", "yanzhang01", subdir = "Beta_version")
 ```
+
+Note: Sometimes "Downloading https://..." does not work if your computer is under a very restricted firewall: status was 'Couldn't connect to server'. Then you may switch to another secure network temporarily.
