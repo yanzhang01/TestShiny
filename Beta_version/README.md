@@ -8,5 +8,5 @@ Run the App in R:
 
 ```R
 if (!require('shiny')) install.packages("shiny")
-runGitHub("shiny_PgenePapers", "yanzhang01")
+shiny::runGitHub("shiny_PgenePapers", "yanzhang01", subdir = "Beta_version")
 ```
