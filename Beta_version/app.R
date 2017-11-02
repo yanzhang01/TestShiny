@@ -16,7 +16,7 @@ server <- function(input, output) {
   
   # download data
   dat <- read.csv(text=getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestData.csv"), header=TRUE)
-  ref <- readLines(file=getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestPapers.txt"))
+  #ref <- readLines(file=getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestPapers.txt"))
   
   # display 10 rows initially
   output$ex1 <- DT::renderDataTable(
@@ -25,7 +25,7 @@ server <- function(input, output) {
 
   # -1 means no pagination; the 2nd element contains menu labels
   output$ex2 <- DT::renderDataTable(
-    DT::datatable(ref, options = list(pageLength = 25))
+    DT::datatable(dat, options = list(pageLength = 25))
   )
 
   # you can also use paging = FALSE to disable pagination
