@@ -1,4 +1,5 @@
 library(shiny)
+library(DT)
 require(RCurl)
 
 dat <-read.csv(text=getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestData.csv"), header=T)
