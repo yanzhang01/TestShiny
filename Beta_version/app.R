@@ -1,6 +1,6 @@
 library(shiny)
 library(DT)
-#require(RCurl)
+require(RCurl)
 
 #dat <-read.csv(text=getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestData.csv"), header=T)
 
@@ -8,7 +8,7 @@ library(DT)
 ui <- navbarPage(
   title = 'PgenePapers (beta version):',
   tabPanel('Pseudogene-gene-role table',     DT::dataTableOutput('ex1')),
-  tabPanel('All pepars',        DT::dataTableOutput('ex2')),
+  tabPanel('All papers',        DT::dataTableOutput('ex2')),
   tabPanel('Graph representation',      DT::dataTableOutput('ex3')),
   tabPanel('Readme',       DT::dataTableOutput('ex4'))
 )
