@@ -14,7 +14,7 @@ ui <- navbarPage(
 )
 
 # Define server logic
-function(input, output) {
+server <- function(input, output) {
 
   # display 10 rows initially
   output$ex1 <- DT::renderDataTable(
