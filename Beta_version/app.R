@@ -32,7 +32,7 @@ server <- function(input, output) {
   )
 
   # Tab3
-  output$readme <- renderUI({  
+  output$graph_presentation <- renderUI({  
     fluidPage(
   
       titlePanel("Hello Shiny!"),
