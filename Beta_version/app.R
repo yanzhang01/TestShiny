@@ -45,7 +45,7 @@ server <- function(input, output) {
         ),
 
         mainPanel(
-          plot(c(1:10), c(21:30))
+          plotOutput(plot(c(1:10), c(21:30)))
           # create fake data
           #src <- c("A", "A", "A", "A",
           #         "B", "B", "C", "C", "D")
