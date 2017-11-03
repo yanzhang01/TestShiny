@@ -45,7 +45,7 @@ server <- function(input, output) {
   # Tab4
   output$readme <- renderUI({  
     fluidRow(
-      column(10,
+      column(4,
         includeMarkdown("README.md")
       )
     )
