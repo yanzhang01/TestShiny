@@ -38,7 +38,7 @@ server <- function(input, output) {
 
       fluidRow(
         column(4,
-          selectInput("pgene",
+          selectInput("pgene", 
                       "Pseudogene:",
                     c("All",
                       unique(as.character(dat$PgeneName))))
@@ -49,8 +49,7 @@ server <- function(input, output) {
                     c("All",
                       unique(as.character(dat$GeneName))))
         )
-       )
-    ),
+      ),
     
       # Create a new row for the table.
       fluidRow(
