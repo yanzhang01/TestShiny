@@ -30,7 +30,7 @@ server <- function(input, output) {
   )
 
   # Tab3
-  output$plot1 <- renderPlot({
+  output$plot1 <- renderSimpleNetwork({
     # Create fake data
     src <- c("A", "A", "A", "A",
              "B", "B", "C", "C", "D")
