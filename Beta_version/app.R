@@ -53,11 +53,6 @@ server <- function(input, output) {
       # Create a new row for the graph
       fluidRow(
         simpleNetworkOutput('simple')
-      ),
-      
-      # Create a new row for the alert
-      fluidRow(
-        textOutput('alert')
       )
     )
   })
@@ -77,13 +72,6 @@ server <- function(input, output) {
       # plot
       simpleNetwork(networkData)
     } 
-  })
-  
-  output$alert <- renderText({ 
-    if (nrow(data) <= 0) {
-      print("no association")
-    }
-    
   })
 
   # Tab4
