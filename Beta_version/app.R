@@ -10,7 +10,6 @@ ui <- navbarPage(
   tabPanel('Pseudogene-gene-role table', DT::dataTableOutput('ex1')),
   tabPanel('All papers', DT::dataTableOutput('ex2')),
   tabPanel('Graph representation', simpleNetworkOutput('simple')),
-  #tabPanel('Readme', textOutput('text_out'))
   tabPanel('Readme', uiOutput('readme'))
 )
 
@@ -44,21 +43,14 @@ server <- function(input, output) {
   })
 
   # Tab4
-  #output$text_out <- renderText({ 
   output$readme <- renderUI({  
-    
-
-  fluidRow(
-    column(4,
-      includeMarkdown("README.md")
+    fluidRow(
+      column(1,
+        includeMarkdown("README.md")
+      )
     )
-  )
-
   })
   
-   
-
- 
 }
 
 # Create Shiny app
