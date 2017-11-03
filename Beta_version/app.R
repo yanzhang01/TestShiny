@@ -5,11 +5,10 @@ require(RCurl)
 # Define UI for the app
 ui <- navbarPage(
   title = 'PgenePapers (beta version):',
-  tabPanel('Pseudogene-gene-role table',     DT::dataTableOutput('ex1')),
-  tabPanel('All papers',        DT::dataTableOutput('ex2')),
-  tabPanel('Graph representation',      DT::dataTableOutput('ex3')),
-  tabPanel('Readme',       DT::dataTableOutput('ex4')),
-  footer = "\n\n\t        Zhang Lab of Computational Genomics and Proteomics @ The Ohio State University"
+  tabPanel('Pseudogene-gene-role table', DT::dataTableOutput('ex1')),
+  tabPanel('All papers', DT::dataTableOutput('ex2')),
+  tabPanel('Graph representation', plotOutput("plot")),
+  tabPanel('Readme', DT::dataTableOutput('ex4'))
 )
 
 # Define server logic
@@ -29,10 +28,13 @@ server <- function(input, output) {
     DT::datatable(ref, options = list(pageLength = 25))
   )
 
-  # Tab3 use paging = FALSE to disable pagination
-  output$ex3 <- DT::renderDataTable(
-    DT::datatable(dat, options = list(paging = FALSE))
-  )
+  # Tab3 use paging = FALSE to disable paginati
+  output$plot1 <- renderPlot({
+     par(mar = c(5.1, 4.1, 0, 1))
+     x <- c(1:10)
+     y <- c(11:20)
+     plot(x, y) 
+  })
 
   # Tab4, use paging = FALSE to disable pagination, turn off filtering (no searching boxes)
   output$ex4 <- DT::renderDataTable(
