@@ -44,7 +44,7 @@ server <- function(input, output) {
   # Tab4
   output$text_out <- renderText({ 
     paste("Readme file")
-    includeMarkdown("include.md")
+    includeMarkdown("README.md")
   })
 
  
