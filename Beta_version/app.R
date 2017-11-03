@@ -34,28 +34,33 @@ server <- function(input, output) {
   # Tab3
   output$graph_presentation <- renderUI({  
     fluidPage(
-  
-      titlePanel("Hello Shiny!"),
+      titlePanel("Select a pseudogene:"),
 
-      # put the side bar on the right
-      sidebarLayout(position = "left",
-
-        sidebarPanel(
-          sliderInput("bins", "Number of bins:", min = 1, max = 50, value = 30)
+      fluidRow(
+        column(4,
+          selectInput("man",
+                      "Manufacturer:",
+                    c("All",
+                      unique(as.character(mpg$manufacturer))))
         ),
-
-        mainPanel(
-          plotOutput(plot(c(1:10), c(21:30)))
-          # create fake data
-          #src <- c("A", "A", "A", "A",
-          #         "B", "B", "C", "C", "D")
-          #target <- c("B", "C", "D", "J",
-          #            "E", "F", "G", "H", "I")
-          #networkData <- data.frame(src, target)
-          # plot
-          #simpleNetwork(networkData)
-        )
-      )
+        column(4,
+          selectInput("trans",
+                      "Transmission:",
+                    c("All",
+                      unique(as.character(mpg$trans))))
+        ),
+        column(4,
+          selectInput("cyl",
+                      "Cylinders:",
+                      c("All",
+                        unique(as.character(mpg$cyl))))
+       )
+    ),
+    
+      # Create a new row for the table.
+      fluidRow(
+        DT::dataTableOutput("table")
+      ) 
     )
   })
   
