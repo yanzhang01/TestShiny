@@ -72,9 +72,6 @@ server <- function(input, output) {
       # plot
       simpleNetwork(networkData)
     } 
-    #else {
-    #  print("No association has been reported.")
-    #}
   })
 
   # Tab4
