@@ -45,15 +45,7 @@ server <- function(input, output) {
         ),
 
         mainPanel(
-          output$distPlot <- renderPlot({
-    x    <- faithful[, 2]  # Old Faithful Geyser data
-    bins <- seq(min(x), max(x), length.out = input$bins + 1)
-
-    # draw the histogram with the specified number of bins
-    hist(x, breaks = bins, col = 'darkgray', border = 'white')
-  })
-          
-          plotOutput("distPlot")
+          plot(c(1:10), c(21:30))
           # create fake data
           #src <- c("A", "A", "A", "A",
           #         "B", "B", "C", "C", "D")
