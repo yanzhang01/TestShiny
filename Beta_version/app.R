@@ -30,7 +30,8 @@ server <- function(input, output) {
 
   # Tab3
   output$plot1 <- renderPlot({
-     plot(c(1:10), c(11:20)) 
+    par(mar = c(5.1, 4.1, 0, 1))
+    plot(c(1:10), c(11:20)) 
   })
 
   # Tab4, use paging = FALSE to disable pagination, turn off filtering (no searching boxes)
