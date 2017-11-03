@@ -72,7 +72,7 @@ server <- function(input, output) {
       # plot
       simpleNetwork(networkData)
     } else {
-      textOutput("no_assocation")
+      textOutput('no_assocation')
     }
   })
   
