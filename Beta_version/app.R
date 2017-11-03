@@ -16,24 +16,24 @@ server <- function(input, output) {
   
   # download data
   dat <- read.csv(text=getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestData.csv"), header=TRUE)
-  #ref <- readLines(file=getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestPapers.txt"))
+  ref <- readLines(file=getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestPapers.csv"), header=TRUE)
   
-  # display 10 rows initially
+  # Tab1
   output$ex1 <- DT::renderDataTable(
     DT::datatable(dat, options = list(pageLength = 25))
   )
 
-  # -1 means no pagination; the 2nd element contains menu labels
+  # Tab2
   output$ex2 <- DT::renderDataTable(
-    DT::datatable(dat, options = list(pageLength = 25))
+    DT::datatable(ref, options = list(pageLength = 25))
   )
 
-  # you can also use paging = FALSE to disable pagination
+  # Tab3 you can also use paging = FALSE to disable pagination
   output$ex3 <- DT::renderDataTable(
     DT::datatable(dat, options = list(paging = FALSE))
   )
 
-  # turn off filtering (no searching boxes)
+  # Tab4 turn off filtering (no searching boxes)
   output$ex4 <- DT::renderDataTable(
     DT::datatable(dat, options = list(searching = FALSE))
   )
