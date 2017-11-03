@@ -7,7 +7,7 @@ To run the app locally, you need to install R on your computer, and then install
 Run the app in R:
 
 ```R
-if(!require('networkD3')) install.packages("networkD3")
+if (!require('networkD3')) install.packages("networkD3")
 if (!require('DT')) install.packages("DT")
 if (!require('shiny')) install.packages("shiny")
 shiny::runGitHub("shiny_PgenePapers", "yanzhang01", subdir = "Beta_version")
