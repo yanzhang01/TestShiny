@@ -15,8 +15,8 @@ ui <- navbarPage(
 server <- function(input, output) {
   
   # download data
-  dat <- read.csv(text=getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestData.csv"), header=TRUE)
-  ref <- read.csv(text=getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestPapers.csv"), header=TRUE)
+  dat <- read.csv(text = getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestData.csv"), header = TRUE)
+  ref <- read.csv(text = getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestPapers.csv"), header = TRUE)
   
   # Tab1
   output$ex1 <- DT::renderDataTable(
@@ -28,14 +28,14 @@ server <- function(input, output) {
     DT::datatable(ref, options = list(pageLength = 25))
   )
 
-  # Tab3 you can also use paging = FALSE to disable pagination
+  # Tab3 use paging = FALSE to disable pagination
   output$ex3 <- DT::renderDataTable(
     DT::datatable(dat, options = list(paging = FALSE))
   )
 
-  # Tab4 turn off filtering (no searching boxes)
+  # Tab4, use paging = FALSE to disable pagination, turn off filtering (no searching boxes)
   output$ex4 <- DT::renderDataTable(
-    DT::datatable(dat, options = list(searching = FALSE))
+    DT::datatable(dat, options = list(paging = FALSE, searching = FALSE))
   )
  
 }
