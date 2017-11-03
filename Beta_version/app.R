@@ -10,7 +10,6 @@ ui <- navbarPage(
   tabPanel('Pseudogene-gene-role table', DT::dataTableOutput('ex1')),
   tabPanel('All papers', DT::dataTableOutput('ex2')),
   tabPanel('Graph presentation', uiOutput('graph_presentation')),
-  #tabPanel('Graph presentation', simpleNetworkOutput('simple')),
   tabPanel('Readme', uiOutput('readme'))
 )
 
@@ -59,12 +58,6 @@ server <- function(input, output) {
   })
   
   output$simple <- renderSimpleNetwork({
-    # create fake data
-    src <- c("A", "A", "A", "A",
-             "B", "B", "C", "C", "D")
-    target <- c("B", "C", "D", "J",
-                "E", "F", "G", "H", "I")
-    
     data <- dat
     if (input$pseudogene != "All") {
       data <- data[data$PgeneName == input$pseudogene,]
@@ -72,12 +65,15 @@ server <- function(input, output) {
     if (input$gene != "All") {
       data <- data[data$GeneName == input$gene,]
     }
-    data
-    src <- data$PgeneName
-    target <- data$GeneName 
-    networkData <- data.frame(src, target)
-    # plot
-    simpleNetwork(networkData)
+    if (nrow(data) > 0) {
+      src <- data$PgeneName
+      target <- data$GeneName 
+      networkData <- data.frame(src, target)
+      # plot
+      simpleNetwork(networkData)
+    } else {
+      print("No association has been reported.")
+    }
   })
 
   # Tab4
