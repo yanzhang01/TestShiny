@@ -8,8 +8,8 @@ ui <- navbarPage(
   title = 'PgenePapers (beta version):',
   tabPanel('Pseudogene-gene-role table', DT::dataTableOutput('ex1')),
   tabPanel('All papers', DT::dataTableOutput('ex2')),
-  tabPanel('Graph representation', simpleNetworkOutput("simple")),
-  tabPanel('About')
+  tabPanel('Graph representation', simpleNetworkOutput('simple')),
+  tabPanel('Readme', textOutput('text_out'))
 )
 
 # Define server logic
@@ -31,21 +31,21 @@ server <- function(input, output) {
 
   # Tab3
   output$simple <- renderSimpleNetwork({
-    # Create fake data
+    # create fake data
     src <- c("A", "A", "A", "A",
              "B", "B", "C", "C", "D")
     target <- c("B", "C", "D", "J",
                 "E", "F", "G", "H", "I")
     networkData <- data.frame(src, target)
-
-    # Plot
+    # plot
     simpleNetwork(networkData)
   })
 
-  # Tab4, use paging = FALSE to disable pagination, turn off filtering (no searching boxes)
-  output$ex4 <- DT::renderDataTable(
-    DT::datatable(dat, options = list(paging = FALSE, searching = FALSE))
-  )
+  # Tab4
+  output$text_out <- renderText({ 
+        paste("Readme file")
+  })
+
  
 }
 
