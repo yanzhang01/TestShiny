@@ -10,7 +10,8 @@ ui <- navbarPage(
   tabPanel('Pseudogene-gene-role table', DT::dataTableOutput('ex1')),
   tabPanel('All papers', DT::dataTableOutput('ex2')),
   tabPanel('Graph representation', simpleNetworkOutput('simple')),
-  tabPanel('Readme', textOutput('text_out'))
+  #tabPanel('Readme', textOutput('text_out'))
+  tabPanel('Readme', uiOutput('readme'))
 )
 
 # Define server logic
@@ -43,8 +44,8 @@ server <- function(input, output) {
   })
 
   # Tab4
-  output$text_out <- renderText({ 
-    
+  #output$text_out <- renderText({ 
+  output$readme <- renderUI({  
     
 
   fluidRow(
