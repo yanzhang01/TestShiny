@@ -9,7 +9,7 @@ ui <- navbarPage(
   title = 'PgenePapers (beta version):',
   tabPanel('Pseudogene-gene-role table', DT::dataTableOutput('ex1')),
   tabPanel('All papers', DT::dataTableOutput('ex2')),
-  tabPenel('Graph presentation', iuOutput('graph_presentation'))
+  tabPenel('Graph presentation', uiOutput('graph_presentation'))
   #tabPanel('Graph presentation', simpleNetworkOutput('simple')),
   tabPanel('Readme', uiOutput('readme'))
 )
