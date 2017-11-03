@@ -1,5 +1,6 @@
 library(shiny)
 library(DT)
+library(networkD3)
 require(RCurl)
 
 # Define UI for the app
@@ -30,8 +31,15 @@ server <- function(input, output) {
 
   # Tab3
   output$plot1 <- renderPlot({
-    par(mar = c(5.1, 4.1, 0, 1))
-    plot(c(1:10), c(11:20)) 
+    # Create fake data
+    src <- c("A", "A", "A", "A",
+             "B", "B", "C", "C", "D")
+    target <- c("B", "C", "D", "J",
+                "E", "F", "G", "H", "I")
+    networkData <- data.frame(src, target)
+
+    # Plot
+    simpleNetwork(networkData)
   })
 
   # Tab4, use paging = FALSE to disable pagination, turn off filtering (no searching boxes)
