@@ -19,4 +19,4 @@ Note: Sometimes "Downloading https://..." does not work if your computer is unde
 
 ---
 **Developed and maintained by the Zhang Lab of Computational Genomics and Proteomics @ The Ohio State University.**
-[link]https://sites.google.com/site/yanzhanglab/lab-members
+[link](https://sites.google.com/site/yanzhanglab/lab-members)
