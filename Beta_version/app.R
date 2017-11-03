@@ -44,7 +44,15 @@ server <- function(input, output) {
 
   # Tab4
   output$text_out <- renderText({ 
-    includeMarkdown("README.md")
+    
+    
+
+  fluidRow(
+    column(4,
+      includeMarkdown("README.md")
+    )
+  )
+
   })
   
    
