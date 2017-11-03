@@ -44,12 +44,30 @@ server <- function(input, output) {
 
   # Tab4
   output$readme <- renderUI({  
-    fluidRow(
-      column(width = 8, offset = 1,
-        includeMarkdown("README.md")
-      )
+  fluidPage(
+
+  titlePanel("Hello Shiny!"),
+
+  # put the side bar on the right
+  sidebarLayout(position = "right",
+
+    sidebarPanel(
+      sliderInput("bins", "Number of bins:", min = 1, max = 50, value = 30)
+    ),
+
+    mainPanel(
+      plotOutput("distPlot")
     )
+  )
+)
   })
+#  output$readme <- renderUI({  
+#    fluidRow(
+#      column(width = 8, offset = 1,
+#        includeMarkdown("README.md")
+#      )
+#    )
+#  })
   
 }
 
