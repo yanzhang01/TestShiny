@@ -8,7 +8,7 @@ ui <- navbarPage(
   title = 'PgenePapers (beta version):',
   tabPanel('Pseudogene-gene-role table', DT::dataTableOutput('ex1')),
   tabPanel('All papers', DT::dataTableOutput('ex2')),
-  tabPanel('Graph representation', plotOutput('plot1')),
+  tabPanel('Graph representation', simpleNetworkOutput("simple")),
   tabPanel('About')
 )
 
@@ -30,7 +30,7 @@ server <- function(input, output) {
   )
 
   # Tab3
-  output$plot1 <- renderSimpleNetwork({
+  output$simple <- renderSimpleNetwork({
     # Create fake data
     src <- c("A", "A", "A", "A",
              "B", "B", "C", "C", "D")
