@@ -52,32 +52,29 @@ server <- function(input, output) {
     
       # Create a new row for the table.
       fluidRow(
-        data <- dat
-        if (input$pseudogene != "All") {
-          data <- data[data$PgeneName == input$pseudogene,]
-        }
-        if (input$gene != "All") {
-          data <- data[data$GeneName == input$gene,]
-        }
-        if (nrow(data) > 0) {
-          simpleNetworkOutput('simple')
-        } else {
-          textOutput('no_assocation')
-        }
+        simpleNetworkOutput('simple')
       )
     )
   })
   
   output$simple <- renderSimpleNetwork({
+    data <- dat
+    if (input$pseudogene != "All") {
+      data <- data[data$PgeneName == input$pseudogene,]
+    }
+    if (input$gene != "All") {
+      data <- data[data$GeneName == input$gene,]
+    }
+    if (nrow(data) > 0) {
       src <- data$PgeneName
       target <- data$GeneName 
       networkData <- data.frame(src, target)
       # plot
       simpleNetwork(networkData)
-  })
-  
-  output$no_association <- renderText({ 
-    "No association has been reported between the two."
+    } 
+    #else {
+    #  print("No association has been reported.")
+    #}
   })
 
   # Tab4
