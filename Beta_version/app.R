@@ -38,7 +38,7 @@ server <- function(input, output) {
 
       fluidRow(
         column(4,
-          selectInput("pgene", 
+          selectInput("pseudogene", 
                       "Pseudogene:",
                     c("All",
                       unique(as.character(dat$PgeneName))))
@@ -64,6 +64,17 @@ server <- function(input, output) {
              "B", "B", "C", "C", "D")
     target <- c("B", "C", "D", "J",
                 "E", "F", "G", "H", "I")
+    
+    data <- dat
+    if (input$pseudogene != "All") {
+      data <- data[data$PgeneName == input$pseudogene,]
+    }
+    if (input$gene != "All") {
+      data <- data[data$GeneName == input$gene,]
+    }
+    data
+    src <- data$PgeneName
+    target <- data$GeneName 
     networkData <- data.frame(src, target)
     # plot
     simpleNetwork(networkData)
