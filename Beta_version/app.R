@@ -5,7 +5,7 @@ library(markdown)
 require(RCurl)
 
 # Define UI for the app
-ui <- navbarPage(
+ui <- navbarPage(inverse = TRUE,
   title = 'PgenePapers (beta version):',
   tabPanel('Pseudogene-gene-role table', DT::dataTableOutput('ex1')),
   tabPanel('All papers', DT::dataTableOutput('ex2')),
