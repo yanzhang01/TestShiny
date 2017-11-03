@@ -71,7 +71,13 @@ server <- function(input, output) {
       networkData <- data.frame(src, target)
       # plot
       simpleNetwork(networkData)
-    } 
+    } else {
+      textOutput("no_assocation")
+    }
+  })
+  
+  output$no_association <- renderText({ 
+    "No association has been reported between the two."
   })
 
   # Tab4
