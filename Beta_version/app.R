@@ -8,7 +8,8 @@ ui <- navbarPage(
   tabPanel('Pseudogene-gene-role table',     DT::dataTableOutput('ex1')),
   tabPanel('All papers',        DT::dataTableOutput('ex2')),
   tabPanel('Graph representation',      DT::dataTableOutput('ex3')),
-  tabPanel('Readme',       DT::dataTableOutput('ex4'))
+  tabPanel('Readme',       DT::dataTableOutput('ex4')),
+  footer = "Zhang Lab of Computational Genomics and Proteomics @ The Ohio State University"
 )
 
 # Define server logic
