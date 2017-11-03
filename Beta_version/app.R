@@ -16,7 +16,7 @@ ui <- navbarPage(
 # Define server logic
 server <- function(input, output) {
   
-  # download data
+  # Download data
   dat <- read.csv(text = getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestData.csv"), header = TRUE)
   ref <- read.csv(text = getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestPapers.csv"), header = TRUE)
   
@@ -50,9 +50,14 @@ server <- function(input, output) {
         )
       ),
     
-      # Create a new row for the table.
+      # Create a new row for the graph
       fluidRow(
         simpleNetworkOutput('simple')
+      ),
+      
+      # Create a new row for the alert
+      fluidRow(
+        textOutput('alert')
       )
     )
   })
@@ -72,9 +77,13 @@ server <- function(input, output) {
       # plot
       simpleNetwork(networkData)
     } 
-    #else {
-    #  print("No association has been reported.")
-    #}
+  })
+  
+  output$alert <- renderText({ 
+    if (nrow(data) <= 0) {
+      print("no association")
+    }
+    
   })
 
   # Tab4
