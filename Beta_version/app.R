@@ -45,15 +45,23 @@ server <- function(input, output) {
         ),
 
         mainPanel(
-          #plotOutput("distPlot")
+          output$distPlot <- renderPlot({
+    x    <- faithful[, 2]  # Old Faithful Geyser data
+    bins <- seq(min(x), max(x), length.out = input$bins + 1)
+
+    # draw the histogram with the specified number of bins
+    hist(x, breaks = bins, col = 'darkgray', border = 'white')
+  })
+          
+          plotOutput("distPlot")
           # create fake data
-          src <- c("A", "A", "A", "A",
-                   "B", "B", "C", "C", "D")
-          target <- c("B", "C", "D", "J",
-                      "E", "F", "G", "H", "I")
-          networkData <- data.frame(src, target)
+          #src <- c("A", "A", "A", "A",
+          #         "B", "B", "C", "C", "D")
+          #target <- c("B", "C", "D", "J",
+          #            "E", "F", "G", "H", "I")
+          #networkData <- data.frame(src, target)
           # plot
-          simpleNetwork(networkData)
+          #simpleNetwork(networkData)
         )
       )
     )
