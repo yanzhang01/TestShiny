@@ -9,7 +9,8 @@ ui <- navbarPage(
   title = 'PgenePapers (beta version):',
   tabPanel('Pseudogene-gene-role table', DT::dataTableOutput('ex1')),
   tabPanel('All papers', DT::dataTableOutput('ex2')),
-  tabPanel('Graph presentation', simpleNetworkOutput('simple')),
+  tabPenel('Graph presentation', iuOutput('graph_presentation'))
+  #tabPanel('Graph presentation', simpleNetworkOutput('simple')),
   tabPanel('Readme', uiOutput('readme'))
 )
 
@@ -31,43 +32,44 @@ server <- function(input, output) {
   )
 
   # Tab3
-  output$simple <- renderSimpleNetwork({
-    # create fake data
-    src <- c("A", "A", "A", "A",
-             "B", "B", "C", "C", "D")
-    target <- c("B", "C", "D", "J",
-                "E", "F", "G", "H", "I")
-    networkData <- data.frame(src, target)
-    # plot
-    simpleNetwork(networkData)
+  output$readme <- renderUI({  
+    fluidPage(
+  
+      titlePanel("Hello Shiny!"),
+
+      # put the side bar on the right
+      sidebarLayout(position = "right",
+
+        sidebarPanel(
+          sliderInput("bins", "Number of bins:", min = 1, max = 50, value = 30)
+        ),
+
+        mainPanel(
+        plotOutput("distPlot")
+        )
+      )
+    )
   })
+  
+  #output$simple <- renderSimpleNetwork({
+  #  # create fake data
+  #  src <- c("A", "A", "A", "A",
+  #           "B", "B", "C", "C", "D")
+  #  target <- c("B", "C", "D", "J",
+  #              "E", "F", "G", "H", "I")
+  #  networkData <- data.frame(src, target)
+  #  # plot
+  #  simpleNetwork(networkData)
+  #})
 
   # Tab4
   output$readme <- renderUI({  
-  fluidPage(
-
-  titlePanel("Hello Shiny!"),
-
-  # put the side bar on the right
-  sidebarLayout(position = "right",
-
-    sidebarPanel(
-      sliderInput("bins", "Number of bins:", min = 1, max = 50, value = 30)
-    ),
-
-    mainPanel(
-      plotOutput("distPlot")
+    fluidRow(
+      column(width = 8, offset = 1,
+        includeMarkdown("README.md")
+      )
     )
-  )
-)
   })
-#  output$readme <- renderUI({  
-#    fluidRow(
-#      column(width = 8, offset = 1,
-#        includeMarkdown("README.md")
-#      )
-#    )
-#  })
   
 }
 
