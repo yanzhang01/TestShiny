@@ -16,7 +16,7 @@ server <- function(input, output) {
   
   # download data
   dat <- read.csv(text=getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestData.csv"), header=TRUE)
-  ref <- readLines(file=getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestPapers.csv"), header=TRUE)
+  ref <- read.csv(text=getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestPapers.csv"), header=TRUE)
   
   # Tab1
   output$ex1 <- DT::renderDataTable(
