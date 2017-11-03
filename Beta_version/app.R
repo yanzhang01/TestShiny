@@ -34,26 +34,21 @@ server <- function(input, output) {
   # Tab3
   output$graph_presentation <- renderUI({  
     fluidPage(
-      titlePanel("Select a pseudogene:"),
+      titlePanel("Select a pseudogene or gene:"),
 
       fluidRow(
         column(4,
-          selectInput("man",
-                      "Manufacturer:",
+          selectInput("pgene",
+                      "Pseudogene:",
                     c("All",
-                      unique(as.character(mpg$manufacturer))))
+                      unique(as.character(dat$PgeneName))))
         ),
         column(4,
-          selectInput("trans",
-                      "Transmission:",
+          selectInput("gene",
+                      "Gene:",
                     c("All",
-                      unique(as.character(mpg$trans))))
-        ),
-        column(4,
-          selectInput("cyl",
-                      "Cylinders:",
-                      c("All",
-                        unique(as.character(mpg$cyl))))
+                      unique(as.character(dat$GeneName))))
+        )
        )
     ),
     
