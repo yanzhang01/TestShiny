@@ -7,8 +7,8 @@ ui <- navbarPage(
   title = 'PgenePapers (beta version):',
   tabPanel('Pseudogene-gene-role table', DT::dataTableOutput('ex1')),
   tabPanel('All papers', DT::dataTableOutput('ex2')),
-  tabPanel('Graph representation'),
-  tabPanel('Readme', DT::dataTableOutput('ex4'))
+  tabPanel('Graph representation', plotOutput('plot1')),
+  tabPanel('About')
 )
 
 # Define server logic
@@ -28,12 +28,9 @@ server <- function(input, output) {
     DT::datatable(ref, options = list(pageLength = 25))
   )
 
-  # Tab3 use paging = FALSE to disable paginati
+  # Tab3
   output$plot1 <- renderPlot({
-     par(mar = c(5.1, 4.1, 0, 1))
-     x <- c(1:10)
-     y <- c(11:20)
-     plot(x, y) 
+     plot(c(1:10), c(11:20)) 
   })
 
   # Tab4, use paging = FALSE to disable pagination, turn off filtering (no searching boxes)
