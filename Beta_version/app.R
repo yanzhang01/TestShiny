@@ -9,7 +9,7 @@ ui <- navbarPage(
   tabPanel('All papers',        DT::dataTableOutput('ex2')),
   tabPanel('Graph representation',      DT::dataTableOutput('ex3')),
   tabPanel('Readme',       DT::dataTableOutput('ex4')),
-  footer = "\n\n\t Zhang Lab of Computational Genomics and Proteomics @ The Ohio State University"
+  footer = "\n\n\t        Zhang Lab of Computational Genomics and Proteomics @ The Ohio State University"
 )
 
 # Define server logic
