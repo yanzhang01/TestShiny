@@ -33,7 +33,7 @@ server <- function(input, output) {
   # Tab3
   output$graph_presentation <- renderUI({  
     fluidPage(
-      titlePanel("Select a pseudogene or gene:"),
+      titlePanel("Select one/all pseudogenes or genes:"),
 
       fluidRow(
         column(4,
