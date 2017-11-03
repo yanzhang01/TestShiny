@@ -18,5 +18,5 @@ shiny::runGitHub("shiny_PgenePapers", "yanzhang01", subdir = "Beta_version")
 Note: Sometimes "Downloading https://..." does not work if your computer is under a very restricted firewall: status was 'Couldn't connect to server'. Then you may switch to another secure network temporarily.  
 
 ---
-**Developed and maintained by the Zhang Lab of Computational Genomics and Proteomics @ The Ohio State University.**
+_Developed and maintained by the **Zhang Lab of Computational Genomics and Proteomics @ The Ohio State University.**_
 [link](https://sites.google.com/site/yanzhanglab/lab-members)
