@@ -64,6 +64,7 @@ server <- function(input, output) {
         } else {
           textOutput('no_assocation')
         }
+      )
     )
   })
   
