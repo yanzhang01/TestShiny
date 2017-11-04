@@ -1,8 +1,13 @@
 Pgene | Gene | PMID | Abstract
+
 IGHGP | ELK1 | PMID: 9089093 | Some of these sites showed tissue-specific methylation. 3' of the unmethylated CpG-rich sequences, clones derived from the 5' (telomeric) copy of the duplicated region, contained, in order, endogenous retroviral sequences, a processed ELK1 pseudogene, and the pseudogene IGHGP. Comparison with the presumed 3' (centromeric) copy of the duplicated region showed that similarity was lost exactly at the end of the retroviral long terminal repeat sequences.
+
 RRM2P3 | MAOB | PMID: 7759098 | A 650-kb YAC containing the loci MAOA, MAOB, and NDP has been used as the starting point for a bidirectional chromosomal walk. A contig of 16 YACs covering between 2 and 3 Mb has been developed in which the following markers/genes are located (in physical order): Xpter--DXS1201 (256ze5)--DXS6668--DXS228--DXS77--MAOA--++ +MAOB--FR12 (pseudogene)--NDP--DXS6670--RRM2P3--DXS6671--DXS742 --Xcen. Seven new STSs are described both for end clones and for internal Alu PCR products from the contig.
+
 CSTP2 | CST1 | PMID: 7896273 | The human type 2 cystatins are encoded by a multigene family of eight to nine members. Five functional genes (CST1-CST5) and two pseudogenes (CSTP1 and CSTP2) have previously been cloned. We have developed a panel of short genomic fragments that serve as gene-specific probes for these seven genes under hybridization conditions used for Southern blots or fluorescence in situ hybridization (FISH). Analysis of BssHII-digested genomic DNA using these probes was consistent with association of all seven genes with a 905-kb fragment, suggesting physical clustering at a single site.
+
 CSTP1 | CST1 | PMID: 7896273 | The human type 2 cystatins are encoded by a multigene family of eight to nine members. Five functional genes (CST1-CST5) and two pseudogenes (CSTP1 and CSTP2) have previously been cloned. We have developed a panel of short genomic fragments that serve as gene-specific probes for these seven genes under hybridization conditions used for Southern blots or fluorescence in situ hybridization (FISH). Analysis of BssHII-digested genomic DNA using these probes was consistent with association of all seven genes with a 905-kb fragment, suggesting physical clustering at a single site.
+
 CALCP | CALCB | PMID: 8468047 | Author information: (1)Institute of Human Genetics, University of Amsterdam, The Netherlands. We report the high-resolution localization of the human calcitonin/CGRP genes, CALCA, CALCB, and the pseudogene CALCP, to a 220-kb SacII fragment on chromosome 11p15.2-p15.
 
 
