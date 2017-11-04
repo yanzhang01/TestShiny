@@ -1,7 +1,3 @@
-# pseudogene  | codingGene |  PMID  |  Abstract
-
-
-
 PTENP1 | ESR1 | PMID: 29021233 |  PTENP1 upregulation decreases PTEN gene expression in the ER-positive MCF7 and T47D human breast carcinoma cells and accelerates MCF7 tumor growth in vivo. Of note, PTENP1 transduction significantly decreases ER&alpha; (ESR1) mRNA and protein levels in MCF7 xenografts with a concomitant increase in hsa-miR-26a, a miR known to target ESR1. In the ER-negative MDA-MB-231 and C3HBA breast cancer cells upregulation of PTENP1 increases PTEN gene expression with no influence on hsa-miR-26a, ESR1 or ER&alpha; expression.
 
 
