@@ -19,7 +19,7 @@ server <- function(input, output) {
   # Download data
   dat <- read.csv(text = getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestData.csv"), 
                   header = TRUE)
-  ref <- read.delim("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestPapers.txt", 
+  ref <- read.delim("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/codingGeneAndpseudoGeneMapping.txt", 
                     header = FALSE, sep = "|", check.names = FALSE, stringsAsFactors = FALSE)
   
   # Tab1
