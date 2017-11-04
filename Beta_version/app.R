@@ -17,10 +17,10 @@ ui <- navbarPage(
 server <- function(input, output) {
   
   # Download data
-  dat <- read.csv(text = getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestData.csv"), header = TRUE)
-  #ref <- read.csv(text = getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestPapers.csv"), header = TRUE)
-  ref <- read.delim(file = getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestPapers.csv"), header = TRUE, 
-                    sep = "|")
+  dat <- read.csv(text = getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestData.csv"), 
+                  header = TRUE)
+  ref <- read.table("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestPapers.txt", 
+                    header = FALSE, sep = "|")
   
   # Tab1
   output$ex1 <- DT::renderDataTable(
