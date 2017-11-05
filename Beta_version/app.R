@@ -18,10 +18,10 @@ server <- function(input, output) {
   
   # Download data
   dat <- read.delim("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/geneAndpseudogeneMappingRelations.txt", 
-                    header = FALSE, sep = "|", check.names = FALSE, stringsAsFactors = FALSE)
+                    header = FALSE, sep = " | ", check.names = FALSE, stringsAsFactors = FALSE)
   names(dat) <- c("Pseudogene ID", "Pseudogene Name", "Coding Gene ID", "Coding Gene Name", "Role")
   ref <- read.delim("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/codingGeneAndpseudoGeneMapping.txt", 
-                    header = TRUE, sep = "|", check.names = FALSE, stringsAsFactors = FALSE)
+                    header = TRUE, sep = " | ", check.names = FALSE, stringsAsFactors = FALSE)
   names(ref) <- c("Pseudogene Name", "Coding Gene Name", "PMID", "Abstract")
   
   # Tab1
