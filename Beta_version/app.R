@@ -54,6 +54,7 @@ server <- function(input, output) {
         )
       ),
     
+      # Creat a button to save network data
       fluidRow(
         column(4, "Click", actionButton("button", "Save network to HTML"))
       ),
@@ -82,6 +83,8 @@ server <- function(input, output) {
     } 
   })
 
+  output$button <- saveNetwork(networkData, file = 'Net1.html', selfcontained = TRUE)
+ 
   # Tab4
   output$readme <- renderUI({  
     fluidRow(
