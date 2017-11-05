@@ -82,6 +82,25 @@ server <- function(input, output) {
       simpleNetwork(networkData, fontSize = 10)
     } 
   })
+  
+  # Downloadable csv of filtered
+  output$download <- downloadHandler(
+    data <- dat
+    if (input$pseudogene != "All") {
+      data <- data[data$"Pseudogene Name" == input$pseudogene,]
+    }
+    if (input$gene != "All") {
+      data <- data[data$"Coding Gene Name" == input$gene,]
+    }
+    
+    filename = function() {
+      paste(input$pseudogene, "-", input$gene, ".csv", sep = "")
+    },
+    content = function(file) {
+      write.csv(data, file, row.names = FALSE)
+    }
+  )
+
  
   # Tab4
   output$readme <- renderUI({  
