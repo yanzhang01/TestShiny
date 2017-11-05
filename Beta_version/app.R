@@ -95,10 +95,10 @@ server <- function(input, output) {
       src <- data$"Pseudogene Name"
       target <- data$"Coding Gene Name" 
       networkData <- data.frame(src, target)
+      # save network in to HTML
+      saveNetwork(networkData, file = 'Net1.html')
       # plot
       simpleNetwork(networkData, fontSize = 10)
-      # save network in to HTML
-      saveNetwork(networkData, file = 'Net1.html', selfcontained = TRUE)
     } 
   })
  
