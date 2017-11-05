@@ -99,7 +99,7 @@ server <- function(input, output) {
       target <- data$"Coding Gene Name" 
       networkData <- data.frame(src, target)
       # plot
-      simpleNetwork(networkData, fontSize = 10)
+      simpleNetwork(networkData, fontSize = 10, height = "1200px")
     }
   })
   
