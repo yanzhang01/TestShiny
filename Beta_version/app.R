@@ -51,7 +51,8 @@ server <- function(input, output) {
                       "Coding Gene:",
                     c("All",
                       sort(unique(as.character(dat$"Coding Gene Name")))))
-        )
+        ),
+        column(4, actionButton("button", "An action button"))
       ),
     
       # Create a new row for the graph
@@ -74,7 +75,7 @@ server <- function(input, output) {
       target <- data$"Coding Gene Name" 
       networkData <- data.frame(src, target)
       # plot
-      simpleNetwork(networkData, fontSize = 11)
+      simpleNetwork(networkData, fontSize = 10)
     } 
   })
 
