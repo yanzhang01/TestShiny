@@ -56,7 +56,7 @@ server <- function(input, output) {
     
       # Creat a button to save network data
       fluidRow(
-        column(4, "Click", actionButton("button", "Save network to HTML"))
+        column(4, "Click", downloadButton("download", "Download filtered data"))
       ),
       
       # Create a new row for the graph
@@ -78,25 +78,6 @@ server <- function(input, output) {
       src <- data$"Pseudogene Name"
       target <- data$"Coding Gene Name" 
       networkData <- data.frame(src, target)
-      # plot
-      simpleNetwork(networkData, fontSize = 10)
-    } 
-  })
-
-  output$button <- renderSimpleNetwork({
-    data <- dat
-    if (input$pseudogene != "All") {
-      data <- data[data$"Pseudogene Name" == input$pseudogene,]
-    }
-    if (input$gene != "All") {
-      data <- data[data$"Coding Gene Name" == input$gene,]
-    }
-    if (nrow(data) > 0) {
-      src <- data$"Pseudogene Name"
-      target <- data$"Coding Gene Name" 
-      networkData <- data.frame(src, target)
-      # save network in to HTML
-      saveNetwork(networkData, file = 'Net1.html')
       # plot
       simpleNetwork(networkData, fontSize = 10)
     } 
