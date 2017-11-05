@@ -16,14 +16,25 @@ ui <- navbarPage(
 # Define server logic
 server <- function(input, output) {
   
-  # Download data
+  # Download and format data
   dat <- read.delim("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/geneAndpseudogeneMappingRelations.txt", 
-                    header = FALSE, sep = " | ", check.names = FALSE, stringsAsFactors = FALSE)
+                    header = FALSE, sep = "|", check.names = FALSE, stringsAsFactors = FALSE)
+  dat.2 <- apply(dat, 2, function(x) gsub("^\\s+", "", x))
+  dat.3 <- apply(dat.2, 2, function(x) gsub("\\s+$", "", x))
+  dat <- data.frame(dat.3, stringsAsFactors = FALSE)
   names(dat) <- c("Pseudogene ID", "Pseudogene Name", "Coding Gene ID", "Coding Gene Name", "Role")
+  rm(dat.2)
+  rm(dat.3)
+              
   ref <- read.delim("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/codingGeneAndpseudoGeneMapping.txt", 
-                    header = TRUE, sep = " | ", check.names = FALSE, stringsAsFactors = FALSE)
+                    header = TRUE, sep = "|", check.names = FALSE, stringsAsFactors = FALSE)
+  ref.2 <- apply(ref, 2, function(x) gsub("^\\s+", "", x))
+  ref.3 <- apply(ref.2, 2, function(x) gsub("\\s+$", "", x))
+  ref <- data.frame(ref.3, stringsAsFactors = FALSE)
   names(ref) <- c("Pseudogene Name", "Coding Gene Name", "PMID", "Abstract")
-  
+  rm(ref.2)
+  rm(ref.3)
+                 
   # Tab1
   output$ex1 <- DT::renderDataTable(
     DT::datatable(dat, options = list(pageLength = 25))
