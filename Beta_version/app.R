@@ -64,14 +64,14 @@ server <- function(input, output) {
   output$simple <- renderSimpleNetwork({
     data <- dat
     if (input$pseudogene != "All") {
-      data <- data[data$PgeneName == input$pseudogene,]
+      data <- data[data$"Pseudogene Name" == input$pseudogene,]
     }
     if (input$gene != "All") {
-      data <- data[data$GeneName == input$gene,]
+      data <- data[data$"Coding Gene Name" == input$gene,]
     }
     if (nrow(data) > 0) {
-      src <- data$PgeneName
-      target <- data$GeneName 
+      src <- data$"Pseudogene Name"
+      target <- data$"Coding Gene Name" 
       networkData <- data.frame(src, target)
       # plot
       simpleNetwork(networkData)
