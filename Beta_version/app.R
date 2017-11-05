@@ -39,7 +39,7 @@ server <- function(input, output) {
     fluidPage(
       titlePanel("Select one/all pseudogenes or genes:"),
 
-      fluidRow(
+      fluidRow(align="bottom", 
         column(4,
           selectInput("pseudogene", 
                       "Pseudogene:",
@@ -52,7 +52,7 @@ server <- function(input, output) {
                     c("All",
                       sort(unique(as.character(dat$"Coding Gene Name")))))
         ),
-        column(4, "bottomleft", actionButton("button", "An action button"))
+        column(4, actionButton("button", "An action button"))
       ),
     
       # Create a new row for the graph
