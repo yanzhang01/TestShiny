@@ -56,12 +56,12 @@ server <- function(input, output) {
     
       # Creat a button to save network data
       fluidRow(
-        column(4, "Click", downloadButton("download", "Download filtered data"))
+        column(4, "Click", downloadButton("downloadData", "Download filtered data"))
       ),
       
       # Create a new row for the graph
       fluidRow(
-        simpleNetworkOutput('simple', width = "100%", height = "1200px")
+        simpleNetworkOutput('simple')
       )
     )
   })
@@ -83,20 +83,19 @@ server <- function(input, output) {
     } 
   })
   
-  # Downloadable csv of filtered
-  output$download <- downloadHandler(
-    data <- dat
-    if (input$pseudogene != "All") {
-      data <- data[data$"Pseudogene Name" == input$pseudogene,]
-    }
-    if (input$gene != "All") {
-      data <- data[data$"Coding Gene Name" == input$gene,]
-    }
-    
+  # Download csv of filtered data
+  output$downloadData <- downloadHandler(
     filename = function() {
-      paste(input$pseudogene, "-", input$gene, ".csv", sep = "")
+      paste(input$pseudogene, "_", input$gene, ".csv", sep = "")
     },
     content = function(file) {
+      data <- dat
+      if (input$pseudogene != "All") {
+        data <- data[data$"Pseudogene Name" == input$pseudogene,]
+      }
+      if (input$gene != "All") {
+        data <- data[data$"Coding Gene Name" == input$gene,]
+      }
       write.csv(data, file, row.names = FALSE)
     }
   )
