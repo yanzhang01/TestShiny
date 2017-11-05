@@ -25,6 +25,7 @@ server <- function(input, output) {
   names(dat) <- c("Pseudogene ID", "Pseudogene Name", "Coding Gene ID", "Coding Gene Name", "Role")
   rm(dat.2)
   rm(dat.3)
+  dat <- dat[order(dat$"Pseudogene Name", dat$"Coding Gene Name"),]
               
   ref <- read.delim("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/codingGeneAndpseudoGeneMapping.txt", 
                     header = TRUE, sep = "|", check.names = FALSE, stringsAsFactors = FALSE)
@@ -34,6 +35,7 @@ server <- function(input, output) {
   names(ref) <- c("Pseudogene Name", "Coding Gene Name", "PMID", "Abstract")
   rm(ref.2)
   rm(ref.3)
+  ref <- ref[order(ref$"Pseudogene Name", ref$"Coding Gene Name"),]
                  
   # Tab1
   output$ex1 <- DT::renderDataTable(
