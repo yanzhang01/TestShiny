@@ -56,7 +56,7 @@ server <- function(input, output) {
     
       # Create a new row for the graph
       fluidRow(
-        simpleNetworkOutput('simple')
+        simpleNetworkOutput('simple', width = "100%", height = "1000px")
       )
     )
   })
