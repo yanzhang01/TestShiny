@@ -44,13 +44,13 @@ server <- function(input, output) {
           selectInput("pseudogene", 
                       "Pseudogene:",
                     c("All",
-                      unique(as.character(dat$"Pseudogene Name"))))
+                      sort(unique(as.character(dat$"Pseudogene Name")))))
         ),
         column(4,
           selectInput("gene",
                       "Coding Gene:",
                     c("All",
-                      unique(as.character(dat$"Coding Gene Name"))))
+                      sort(unique(as.character(dat$"Coding Gene Name")))))
         )
       ),
     
