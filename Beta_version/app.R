@@ -7,9 +7,9 @@ require(RCurl)
 # Define UI for the app
 ui <- navbarPage(
   title = 'PgenePapers (beta version) Tools:',
-  tabPanel('Pseudogene-gene-role table', DT::dataTableOutput('ex1')),
-  tabPanel('All papers', DT::dataTableOutput('ex2')),
-  tabPanel('Graph presentation', uiOutput('graph_presentation')),
+  tabPanel('Pseudogene-Gene-Role Table', DT::dataTableOutput('ex1')),
+  tabPanel('All Papers', DT::dataTableOutput('ex2')),
+  tabPanel('Graph Presentation and Data Download', uiOutput('graph_presentation')),
   tabPanel('Readme', uiOutput('readme'))
 )
 
