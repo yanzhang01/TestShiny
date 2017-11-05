@@ -83,7 +83,24 @@ server <- function(input, output) {
     } 
   })
 
-  output$button <- saveNetwork(networkData, file = 'Net1.html', selfcontained = TRUE)
+  output$button <- renderSimpleNetwork({
+    data <- dat
+    if (input$pseudogene != "All") {
+      data <- data[data$"Pseudogene Name" == input$pseudogene,]
+    }
+    if (input$gene != "All") {
+      data <- data[data$"Coding Gene Name" == input$gene,]
+    }
+    if (nrow(data) > 0) {
+      src <- data$"Pseudogene Name"
+      target <- data$"Coding Gene Name" 
+      networkData <- data.frame(src, target)
+      # plot
+      simpleNetwork(networkData, fontSize = 10)
+      # save network in to HTML
+      saveNetwork(networkData, file = 'Net1.html', selfcontained = TRUE)
+    } 
+  })
  
   # Tab4
   output$readme <- renderUI({  
