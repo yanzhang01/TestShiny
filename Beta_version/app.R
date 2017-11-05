@@ -52,7 +52,7 @@ server <- function(input, output) {
                     c("All",
                       sort(unique(as.character(dat$"Coding Gene Name")))))
         ),
-        column(4, actionButton("button", "An action button"))
+        column(4, actionButton("button", "Save network to HTML"))
       ),
     
       # Create a new row for the graph
