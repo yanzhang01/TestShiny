@@ -20,7 +20,7 @@ server <- function(input, output) {
   dat <- read.csv(text = getURL("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/TestData.csv"), 
                   header = TRUE)
   ref <- read.delim("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/codingGeneAndpseudoGeneMapping.txt", 
-                    header = FALSE, sep = "|", check.names = FALSE, stringsAsFactors = FALSE)
+                    header = TRUE, sep = "|", check.names = FALSE, stringsAsFactors = FALSE)
   
   # Tab1
   output$ex1 <- DT::renderDataTable(
