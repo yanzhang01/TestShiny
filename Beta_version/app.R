@@ -88,7 +88,7 @@ server <- function(input, output) {
     if (input$gene != "All") {
       data <- data[data$"Coding Gene Name" == input$gene,]
     }
-    if (nrow(data) > 100) {
+    if ((input$pseudogene == "All") && (input$gene == "All")) {
       src <- data$"Pseudogene Name"
       target <- data$"Coding Gene Name" 
       networkData <- data.frame(src, target)
