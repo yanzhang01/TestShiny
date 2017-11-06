@@ -64,11 +64,6 @@ server <- function(input, output) {
                       "Coding Gene:",
                     c("All",
                       sort(unique(as.character(dat$"Coding Gene Name")))))
-        ),
-        column(4,
-          selectInput("display_width",
-                      "Select the width of graph display:",
-                    c("100%", "150%", "200%"))
         )
       ),
     
@@ -81,7 +76,7 @@ server <- function(input, output) {
       # Create a new row for the graph
       fluidRow(
         column(12, align = 'left',
-               simpleNetworkOutput('simple', width = "150%", height = "1000px"))
+               simpleNetworkOutput('simple', width = "150%", height = "900px"))
       )
     )
   })
@@ -94,19 +89,13 @@ server <- function(input, output) {
     if (input$gene != "All") {
       data <- data[data$"Coding Gene Name" == input$gene,]
     }
-    if ((input$pseudogene == "All") && (input$gene == "All")) {
+    if (nrow(data) > 0) {
       src <- data$"Pseudogene Name"
       target <- data$"Coding Gene Name" 
       networkData <- data.frame(src, target)
       # plot
-      simpleNetwork(networkData, fontSize = 10, width = "200%", height = "1400px")
-    } else if (nrow(data) > 0) {
-      src <- data$"Pseudogene Name"
-      target <- data$"Coding Gene Name" 
-      networkData <- data.frame(src, target)
-      # plot
-      simpleNetwork(networkData, fontSize = 10, width = "100%")
-    }
+      simpleNetwork(networkData, fontSize = 10)
+    } 
   })
   
   # Download csv of filtered data
