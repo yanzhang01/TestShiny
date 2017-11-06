@@ -110,7 +110,7 @@ server <- function(input, output) {
       paste(input$pseudogene, "_", input$gene, ".csv", sep = "")
     },
     content = function(file) {
-      data <- dat
+      data <- ref
       if (input$pseudogene != "All") {
         data <- data[data$"Pseudogene Name" == input$pseudogene,]
       }
