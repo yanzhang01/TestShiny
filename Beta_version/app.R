@@ -65,7 +65,7 @@ server <- function(input, output) {
                     c("All",
                       sort(unique(as.character(dat$"Coding Gene Name")))))
         ),
-        columns(4,
+        column(4,
           selectInput("display_width",
                       "Select the width of graph display:",
                     c("100%", "150%", "200%"))
