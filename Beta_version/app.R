@@ -57,13 +57,13 @@ server <- function(input, output) {
           selectInput("pseudogene", 
                       "Pseudogene:",
                     c("All",
-                      sort(unique(as.character(dat$"Pseudogene Name")))))
+                      sort(unique(as.character(ref$"Pseudogene Name")))))
         ),
         column(4,
           selectInput("gene",
                       "Coding Gene:",
                     c("All",
-                      sort(unique(as.character(dat$"Coding Gene Name")))))
+                      sort(unique(as.character(ref$"Coding Gene Name")))))
         )
       ),
     
@@ -88,7 +88,7 @@ server <- function(input, output) {
   })
   
   output$simple <- renderSimpleNetwork({
-    data <- dat
+    data <- ref
     if (input$pseudogene != "All") {
       data <- data[data$"Pseudogene Name" == input$pseudogene,]
     }
