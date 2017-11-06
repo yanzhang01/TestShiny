@@ -18,7 +18,7 @@ server <- function(input, output) {
   
   # Download and format data
   dat <- read.delim("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/geneAndpseudogeneMappingRelations.txt", 
-                    header = FALSE, sep = "|", check.names = FALSE, stringsAsFactors = FALSE)
+                    header = TRUE, sep = "|", check.names = FALSE, stringsAsFactors = FALSE)
   dat.2 <- apply(dat, 2, function(x) gsub("^\\s+", "", x))
   dat.3 <- apply(dat.2, 2, function(x) gsub("\\s+$", "", x))
   dat <- data.frame(dat.3, stringsAsFactors = FALSE)
