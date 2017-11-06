@@ -20,10 +20,8 @@ Note: Sometimes "Downloading https://..." does not work if your computer is unde
 ### Database and Search Tools:
 
 - **Pseudogene-Gene-Role Table** - Displays compter generated pseudogene-coding gene regulation pairs, supports keyword search in the fly.
-- **All Papers** - Displays manually curated (based on computer generated text) pseudogene-coding gene regulation pairs, provides text from publications as a reference, supports keyword search in the fly. 
-- Note: The keywords in _Coding Gene Name_ starting with a * are not genes, but other associate risks, such as Gastric cancer (GC) risks.
-- **Graph Presentation and Data Download** - The users can select one or all pseudogene(s) or genes (s) from the input lists, and generate an association network in the fly. Users can also download the filtered data corresponding to the graph. 
-- Note: The keywords in _Coding Gene Name_ starting with a * are not genes, but other associate risks, such as Gastric cancer (GC) risks.
+- **All Papers** - Displays manually curated (based on computer generated text) pseudogene-coding gene regulation pairs, provides text from publications as a reference, supports keyword search in the fly. \nNote: The keywords in _Coding Gene Name_ starting with a * are not genes, but other associate risks, such as Gastric cancer (GC) risks.
+- **Graph Presentation and Data Download** - The users can select one or all pseudogene(s) or genes (s) from the input lists, and generate an association network in the fly. Users can also download the filtered data corresponding to the graph. \nNote: The keywords in _Coding Gene Name_ starting with a * are not genes, but other associate risks, such as Gastric cancer (GC) risks.
 - **Readme** - You are here.
 
 ---
