@@ -70,7 +70,12 @@ server <- function(input, output) {
       # Creat a button to save network data
       fluidRow(
         column(12, "Click the button to", downloadButton("downloadData", "Download filtered data"), 
-               ". You can also right click on your mouse and print the graph into a PDF file. Scroll your mouse to view the graph. You can also pick and drag the nodes in the graph.")
+               ". You can also right click on your mouse and print the graph into a PDF file. ")
+      ),
+      
+      # Creat a row to add instructions
+      fluidRow(
+        column(12, "Scroll your mouse (up and down, side to side) to view the graph. You can also pick and drag the nodes in the graph. The connected subnetwork will be highlighted.")
       ),
       
       # Create a new row for the graph
