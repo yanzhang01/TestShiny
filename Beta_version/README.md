@@ -19,7 +19,7 @@ Note: Sometimes "Downloading https://..." does not work if your computer is unde
 
 ### Database and Search Tools:
 
-- **Pseudogene-Gene-Role Table** - Displays manually curated (based on compter generated results) pseudogene-coding gene regulation pairs, supports keyword search in the fly.
+- **Pseudogene-Gene-Role Table** - Displays manually curated (based on computer generated results) pseudogene-coding gene regulation pairs, supports keyword search in the fly.
 
   Note: The keywords in **_Coding Gene Name_** starting with a * are not genes, but other associated risk, such as Gastric cancer (GC) risk.
 - **All Papers** - Displays manually curated (based on computer generated results) pseudogene-coding gene regulation pairs, provides text from publications as a reference, supports keyword search in the fly. 
