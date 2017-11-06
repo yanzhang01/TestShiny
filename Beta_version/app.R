@@ -22,7 +22,7 @@ server <- function(input, output) {
   dat.2 <- apply(dat, 2, function(x) gsub("^\\s+", "", x))
   dat.3 <- apply(dat.2, 2, function(x) gsub("\\s+$", "", x))
   dat <- data.frame(dat.3, stringsAsFactors = FALSE)
-  names(dat) <- c("Pseudogene ID", "Pseudogene Name", "Coding Gene ID", "Coding Gene Name", "Role")
+  names(dat) <- c("Pseudogene ID", "Pseudogene Name", "Coding Gene ID", "Coding Gene Name", "PMID", "Role")
   rm(dat.2)
   rm(dat.3)
   #dat <- dat[order(dat$"Pseudogene Name", dat$"Role"),]
