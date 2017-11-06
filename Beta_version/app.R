@@ -67,7 +67,7 @@ server <- function(input, output) {
         ),
         columns(4,
           selectInput("display_width",
-                      "Select the width of graph display:"
+                      "Select the width of graph display:",
                     c("100%", "150%", "200%"))
         )
       ),
