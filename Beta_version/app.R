@@ -75,7 +75,7 @@ server <- function(input, output) {
       
       # Creat a row to add instructions
       fluidRow(
-        column(12, "Scroll your mouse (up and down, side to side) to view the graph. You can also pick and drag the nodes in the graph. The connected subnetwork will be highlighted.")
+        column(12, "Scroll your mouse (up and down, side to side) to view the graph. You can also pick and drag a node in the graph. The connected subnetwork will be highlighted.")
       ),
       
       # Create a new row for the graph
