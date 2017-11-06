@@ -80,7 +80,7 @@ server <- function(input, output) {
       
       # Create a new row for the graph
       fluidRow(
-        simpleNetworkOutput('simple', width = input$display_width, height = "1400px")
+        simpleNetworkOutput('simple', height = "1400px")
       )
     )
   })
@@ -98,13 +98,13 @@ server <- function(input, output) {
       target <- data$"Coding Gene Name" 
       networkData <- data.frame(src, target)
       # plot
-      simpleNetwork(networkData, fontSize = 10, height = "1400px")
+      simpleNetwork(networkData, fontSize = 10, width = "200%", height = "1400px")
     } else if (nrow(data) > 0) {
       src <- data$"Pseudogene Name"
       target <- data$"Coding Gene Name" 
       networkData <- data.frame(src, target)
       # plot
-      simpleNetwork(networkData, fontSize = 10)
+      simpleNetwork(networkData, fontSize = 10, width = "100%")
     }
   })
   
