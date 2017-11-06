@@ -93,13 +93,13 @@ server <- function(input, output) {
       target <- data$"Coding Gene Name" 
       networkData <- data.frame(src, target)
       # plot
-      simpleNetwork(networkData, fontSize = 10, height = 1200)
+      simpleNetwork(networkData, fontSize = 10, height = "1200px")
     } else if (nrow(data) > 0) {
       src <- data$"Pseudogene Name"
       target <- data$"Coding Gene Name" 
       networkData <- data.frame(src, target)
       # plot
-      simpleNetwork(networkData, fontSize = 10, height = "1200px")
+      simpleNetwork(networkData, fontSize = 10)
     }
   })
   
