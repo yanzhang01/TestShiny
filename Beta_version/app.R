@@ -17,7 +17,7 @@ ui <- navbarPage(
 server <- function(input, output) {
   
   # Download and format data
-  dat <- read.delim("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/geneAndpseudogeneMappingRelations_ComputerGenerated_20171106.txt", 
+  dat <- read.delim("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/codingGeneAndpseudoGeneMapping-noRepeatLines.txt", 
                     header = TRUE, sep = "|", check.names = FALSE, stringsAsFactors = FALSE)
   dat.2 <- apply(dat, 2, function(x) gsub("^\\s+", "", x))
   dat.3 <- apply(dat.2, 2, function(x) gsub("\\s+$", "", x))
