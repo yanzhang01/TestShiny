@@ -64,6 +64,11 @@ server <- function(input, output) {
                       "Coding Gene:",
                     c("All",
                       sort(unique(as.character(dat$"Coding Gene Name")))))
+        ),
+        columns(4,
+          selectInput("display_width",
+                      "Select the width of graph display:"
+                    c("100%", "150%", "200%"))
         )
       ),
     
@@ -75,7 +80,7 @@ server <- function(input, output) {
       
       # Create a new row for the graph
       fluidRow(
-        simpleNetworkOutput('simple', width = "200%", height = "1400px")
+        simpleNetworkOutput('simple', width = input$display_width, height = "1400px")
       )
     )
   })
@@ -99,7 +104,7 @@ server <- function(input, output) {
       target <- data$"Coding Gene Name" 
       networkData <- data.frame(src, target)
       # plot
-      simpleNetwork(networkData, fontSize = 10, height = "500px")
+      simpleNetwork(networkData, fontSize = 10)
     }
   })
   
