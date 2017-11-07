@@ -23,6 +23,8 @@ Note: Sometimes "Downloading https://..." does not work if your computer is unde
 
 ### Database and Search Tools:
 
+- **Database version** - The publication titles and abstracts that we used were downloaded from PubMed on Oct. 27, 2017. The PubMed text file can be accessed at [link](https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/pubmed_result.txt), downloadable at [link](https://github.com/yanzhang01/shiny_PgenePapers/blob/master/Beta_version/pubmed_result.txt)
+
 - **Pseudogene-Gene-Role Table** - Displays manually curated (based on computer generated results) pseudogene-coding gene regulation pairs, supports keyword search in the fly.
 
   Note: The keywords in **_Coding Gene Name_** starting with an * are not genes, but other associated risk, such as Gastric cancer (GC) risk.
