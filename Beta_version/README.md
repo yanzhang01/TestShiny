@@ -23,17 +23,22 @@ Note: Sometimes "Downloading https://..." does not work if your computer is unde
 
 ### Database and Search Tools:
 
-- **Database version** - The publication titles and abstracts that we used were downloaded from PubMed on Oct. 27, 2017. The PubMed text file can be accessed at [link](https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/pubmed_result.txt), downloadable at [link](https://github.com/yanzhang01/shiny_PgenePapers/blob/master/Beta_version/pubmed_result.txt)
+- **Database Version** - The publication titles and abstracts that we used were downloaded from PubMed on Oct. 27, 2017. The PubMed text file can be accessed at [link](https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/pubmed_result.txt), downloadable at [link](https://github.com/yanzhang01/shiny_PgenePapers/blob/master/Beta_version/pubmed_result.txt).
+
+- **Web Application Version** - Beta version.
 
 - **Pseudogene-Gene-Role Table** - Displays manually curated (based on computer generated results) pseudogene-coding gene regulation pairs, supports keyword search in the fly.
 
   Note: The keywords in **_Coding Gene Name_** starting with an * are not genes, but other associated risk, such as Gastric cancer (GC) risk.
+  
 - **All Papers** - Displays manually curated (based on computer generated results) pseudogene-coding gene regulation pairs, provides text from publications as a reference, supports keyword search in the fly. 
 
   Note: The keywords in **_Coding Gene Name_** starting with an * are not genes, but other associated risk, such as Gastric cancer (GC) risk.
+
 - **Graph Presentation and Data Download** - The users can select one or all pseudogene(s) or genes (s) from the input lists, and generate an association network in the fly. Users can also download the filtered data corresponding to the graph. 
 
   Note: The keywords in **_Coding Gene Name_** starting with an * are not genes, but other associated risks, such as gastric cancer (GC) risk.
+
 - **Readme** - You are here.
 
 ---
