@@ -27,7 +27,7 @@ Note: Sometimes "Downloading https://..." does not work if your computer is unde
   Note: The keywords in **_Coding Gene Name_** starting with a * are not genes, but other associated risk, such as Gastric cancer (GC) risk.
 - **Graph Presentation and Data Download** - The users can select one or all pseudogene(s) or genes (s) from the input lists, and generate an association network in the fly. Users can also download the filtered data corresponding to the graph. 
 
-  Note: The keywords in **_Coding Gene Name_** starting with a * are not genes, but other associated risks, such as Gastric cancer (GC) risk.
+  Note: The keywords in **_Coding Gene Name_** starting with a * are not genes, but other associated risks, such as gastric cancer (GC) risk.
 - **Readme** - You are here.
 
 ---
