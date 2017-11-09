@@ -20,7 +20,7 @@ if (!require('shiny')) install.packages("shiny")
 shiny::runGitHub("shiny_PgenePapers", "yanzhang01", subdir = "Beta_version")
 ```
 
-Note: Sometimes "Downloading https://..." does not work if your computer is under a very restricted firewall: status was 'Couldn't connect to server'. Then you may download from an http CRAN mirror, or switch to another secure network temporarily.  
+Note: Sometimes "Downloading https://..." does not work if your computer is under a very restricted firewall: status was 'Couldn't connect to server'. Then you may choose to download the packages from an http CRAN mirror, or switch to another secure network temporarily.  
 
 ### Database and Search Tools:
 
