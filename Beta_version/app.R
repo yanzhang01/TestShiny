@@ -27,7 +27,7 @@ server <- function(input, output) {
   rm(dat.3)
   #dat <- dat[order(dat$"Pseudogene Name", dat$"Role"),]
               
-  ref <- read.delim("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/AllAbstracts_ManuallyCurated_20171106.txt", 
+  ref <- read.delim("https://raw.githubusercontent.com/yanzhang01/shiny_PgenePapers/master/Beta_version/AllAbstracts_ManuallyCurated_20171117.txt", 
                     header = TRUE, sep = "|", check.names = FALSE, stringsAsFactors = FALSE)
   ref.2 <- apply(ref, 2, function(x) gsub("^\\s+", "", x))
   ref.3 <- apply(ref.2, 2, function(x) gsub("\\s+$", "", x))
