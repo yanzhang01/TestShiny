@@ -6,7 +6,7 @@ Reference: Awasthi A, Tan S, Mo X, Fan K, Zhang Y. PgenePapers: a novel database
 
 ### What is PgenePapers?
 
-**PgenePapers** is a novel database and search tools of reported regulatory pseudogenes. We used all the currently available publications related to pseudogenes in PubMed, and mined the pseudogene-coding gene regulation pairs. We further assigned the pairs into different categories based on pseudogenesâ functional roles. We anticipate this study to set a foundation of systematically annotating regulatory pseudogenes, and facilitate future methodology development and experimental studies of pseudogene functions.
+**PgenePapers** is a novel database and search tools of reported regulatory pseudogenes. We used all the currently available publications related to pseudogenes in PubMed, and mined the pseudogene-coding gene regulation pairs. We further assigned the pairs into different categories based on pseudogenes and their functional roles. We anticipate this study to set a foundation of systematically annotating regulatory pseudogenes, and facilitate future methodology development and experimental studies of pseudogene functions.
 
 
 ### Database and Search Tools:
